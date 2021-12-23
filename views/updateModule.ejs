@@ -1,0 +1,21 @@
+<body>
+
+
+    <h2>Edit Module</h2>
+    <% editModule.forEach((module)=> 
+    { %>
+    <form href="<%= `/updateModule/${module.mid}` %>" method="POST">
+        <label>Module ID:</label><br />
+        <input type="text" readonly="true" name="mid" value="<%= module.mid %>"><br />
+        <label>Name:</label><br />
+        <input type="text" name="name"value="<%= module.name %>"><br />
+        <label>Credits:</label><br/>
+        <input type="number" name="credits" value="<%= module.credits %>"></input><br /><br />
+        <input type="submit" value="Confirm">
+
+    </form>
+    <% }) %>
+    <a href="/">Home</a><br/><br/>
+    <h3>The Module name should be a minumim of 5 characters.</h3>
+<h3>Credits should be 5, 10 or 15.</h3>
+</body>
